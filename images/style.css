@@ -1,0 +1,39 @@
+/* Estilo para el main */
+main {
+  width: 800px;
+  margin: 0 auto;
+}
+
+/* Imagen de perfil solo dentro de main */
+main img {
+  width: 150px;
+  height: auto;
+}
+
+/* Estilo para el aside */
+aside {
+  width: 300px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  padding: 15px;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Imagen dentro del aside */
+aside img {
+  width: 200px;
+  height: auto;
+}
+
+/* Todos los párrafos sin padding */
+p {
+  padding: 0;
+}
+
+/* Estilo para el footer */
+footer {
+  margin-top: 30px;
+  border-top: 2px solid #ccc;
+  text-align: center;
+}

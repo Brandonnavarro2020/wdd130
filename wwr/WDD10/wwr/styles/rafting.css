@@ -1,12 +1,12 @@
+/* Rafting Project - rafting.css */
 
 :root {
   --primary-color: #0F2742;
   --secondary-color: #7476A1;
   --accent1-color: #E4E5E9;
   --accent2-color: #ADB0BC;
-
-  --heading-font: "Oswald", sans-serif;
-  --body-font: "Open Sans", sans-serif;
+  --heading-font: 'Oswald', sans-serif;
+  --body-font: 'Open Sans', sans-serif;
 }
 
 * {
@@ -15,6 +15,7 @@
   box-sizing: border-box;
 }
 
+/* General Layout */
 body {
   font-family: var(--body-font);
   color: var(--primary-color);
@@ -23,24 +24,53 @@ body {
 }
 
 header, main, footer {
-  width: 840px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 1rem;
 }
 
-h1, h2 {
+/* Header Grid */
+header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: var(--accent1-color);
+  padding: 1rem;
+}
+
+header img {
+  height: 60px;
+}
+
+header h1 {
   font-family: var(--heading-font);
-  color: var(--primary-color);
+  font-size: 2rem;
+  margin-left: 1rem;
 }
 
-nav, p, section, article {
-  margin: 16px;
-  padding: 8px;
+/* Nav Flex */
+nav {
+  grid-column: span 2;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
 }
 
-.socialmedia a {
+nav a {
   text-decoration: none;
+  color: var(--accent1-color);
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
 }
 
+nav a:hover {
+  color: var(--secondary-color);
+}
+
+/* Hero Section */
 .hero {
   position: relative;
 }
@@ -57,49 +87,96 @@ nav, p, section, article {
   width: 100%;
   padding: 16px;
   text-align: center;
-  background-color: var(--accent2-color);
-  color: white;
-  opacity: 0.9;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 2.5rem;
 }
 
 .hero article {
   position: absolute;
-  bottom: 30px;
-  left: 30px;
-  right: 30px;
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 16px;
+  bottom: 20px;
+  left: 20px;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 1rem;
+  max-width: 400px;
+  font-size: 1rem;
   border-radius: 8px;
-  font-style: italic;
-  color: var(--primary-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .hero article img {
   float: right;
-  width: 125px;
-  margin-left: 12px;
-  border-radius: 4px;
+  width: 100px;
+  margin-left: 1rem;
 }
 
-section.history p {
-  color: var(--secondary-color);
-  font-style: italic;
+/* Section Layout */
+section {
+  margin-top: 2rem;
+  padding: 1rem;
 }
 
-section img {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  margin: 8px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+section h2 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
-footer {
-  margin-top: 32px;
-  padding: 16px;
-  border-top: 2px solid var(--secondary-color);
+/* Adventures Section */
+.adventures {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.adventures figure {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  overflow: hidden;
   text-align: center;
+  padding: 0.5rem;
+}
+
+.adventures img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.adventures figcaption {
+  font-weight: bold;
+  color: var(--secondary-color);
+  padding: 0.5rem 0;
+}
+
+/* Footer */
+footer {
+  margin-top: 3rem;
+  padding: 1rem;
+  border-top: 2px solid var(--secondary-color);
   background-color: var(--primary-color);
-  color: white;
+  color: var(--accent1-color);
+  text-align: center;
+  position: relative;
+}
+
+footer .socialmedia {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 1rem;
+}
+
+footer .socialmedia a {
+  text-decoration: none;
+}
+
+footer .socialmedia img {
+  width: 32px;
+  height: 32px;
 }

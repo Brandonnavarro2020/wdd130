@@ -276,3 +276,47 @@ footer p {
     }
 }
 
+.map {
+  border: 0;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.map-section {
+  margin: 20px 0;
+}
+
+figure {
+  display: inline-block;
+  margin: 10px;
+  text-align: center;
+}
+
+figure img {
+  width: 150px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+}
+
+form input, form textarea, form button {
+  margin: 5px 0;
+  padding: 8px;
+}
+
+form button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: var(--secondary-color);
+}

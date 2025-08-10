@@ -1,96 +1,116 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Contact Rapid Brand Rafting - Reach out to us for inquiries or reservations." />
-  <meta name="author" content="Brandon Navarro" />
-  <title>Contact Us | Rapid Brand Rafting</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Rapid Brand Rafting</title>
+    <meta name="description" content="Contact Rapid Brand Rafting - reservas, preguntas y soporte. Ubicación en Madrid, Cundinamarca, Colombia.">
+    <meta name="author" content="Brandon Navarro">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Open+Sans:ital,wght@0,300;1,300&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles/rafting.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&family=Open+Sans:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/rafting.css">
 </head>
 <body>
-  <header>
-    <img src="images/logo.png" alt="Rapid Brand Rafting Logo" />
+<header>
+    <img src="images/logo.png" alt="Rapid Brand Rafting Logo">
     <h1>Rapid Brand Rafting</h1>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="trips.html">Trips</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="trips.html">Trips</a></li>
+            <li><a href="contact.html" class="active">Contact Us</a></li>
+        </ul>
     </nav>
-  </header>
+</header>
 
-  <main>
-    <section>
-      <h2>Contact Information</h2>
-      <p>Address: Bogota Colombia calle Rapidbrand 123</p>
-      <p>Phone: (311) 643-6071</p>
-      <p>Email: contact@rapidbrandrafting.com</p>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18..."
-        width="100%" height="300" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
+<main>
+    <!-- Contact Info -->
+    <section class="contact-info">
+        <h2>Contact Information</h2>
+        <p><strong>Address:</strong> Calle 7 # 4-23, Madrid, Cundinamarca, Colombia</p>
+        <p><strong>Phone:</strong> +57 320 456 7890</p>
+        <p><strong>Email:</strong> info@rapidbrandrafting.com</p>
+
+        <!-- Google Map - Madrid, Cundinamarca -->
+<section class="map-section">
+  <h2>Find Us Here</h2>
+  <iframe
+    class="map"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.5946173684915!2d-74.27301992418987!3d4.732437741805639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f0fc1e402f011%3A0x2c47f9e91f6d2cf!2sMadrid%2C%20Cundinamarca!5e0!3m2!1ses!2sco!4v1691800000000!5m2!1ses!2sco"
+    width="100%"
+    height="300"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</section>
+
+
+    <!-- Employees -->
+    <section class="employees">
+        <h2>Meet Our Team</h2>
+
+        <figure>
+            <img src="images/employee1.jpg" alt="Emma - Lead Guide">
+            <figcaption>Emma — Lead Guide</figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/employee2.jpg" alt="Lucas - Safety Officer">
+            <figcaption>Lucas — Safety Officer</figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/employee3.jpg" alt="Sofia - Customer Support">
+            <figcaption>Sofia — Customer Support</figcaption>
+        </figure>
     </section>
 
-    <section>
-      <h2>Meet Our Team</h2>
-      <figure>
-        <img src="images/employee1.jpg" alt="Emma - Guide" />
-        <figcaption>Emma – Lead Guide</figcaption>
-      </figure>
-      <figure>
-        <img src="images/employee2.jpg" alt="Lucas - Safety" />
-        <figcaption>Lucas – Safety Officer</figcaption>
-      </figure>
-      <figure>
-        <img src="images/employee3.jpg" alt="Sofia - Support" />
-        <figcaption>Sofia – Customer Support</figcaption>
-      </figure>
+    <!-- Contact Form -->
+    <section class="contact-form">
+        <h2>Send Us a Message</h2>
+        <form action="#" method="post" aria-label="Contact form">
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" required>
+
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" required>
+
+            <fieldset>
+                <legend>Purpose of message</legend>
+                <label><input type="radio" name="purpose" value="general" required> General Inquiry</label>
+                <label><input type="radio" name="purpose" value="reservation"> Reservation Question</label>
+                <label><input type="radio" name="purpose" value="suggestion"> Website Suggestion</label>
+            </fieldset>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <label class="checkbox">
+                <input type="checkbox" name="subscribe"> Please subscribe me to the monthly newsletter
+            </label>
+
+            <button type="submit">Send Message</button>
+        </form>
     </section>
+</main>
 
-    <section>
-      <h2>Contact Form</h2>
-      <form>
-        <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name" required />
-
-        <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" required />
-
-        <fieldset>
-          <legend>Purpose of Message:</legend>
-          <label><input type="radio" name="purpose" value="inquiry" required /> General Inquiry</label>
-          <label><input type="radio" name="purpose" value="reservation" /> Reservation Question</label>
-          <label><input type="radio" name="purpose" value="suggestion" /> Website Suggestion</label>
-        </fieldset>
-
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5"></textarea>
-
-        <label>
-          <input type="checkbox" name="subscribe" /> Please subscribe me to the monthly newsletter
-        </label>
-
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
-  </main>
-
-  <footer>
+<footer>
     <p>&copy; 2025 Rapid Brand Rafting | Brandon Navarro</p>
     <nav class="socialmedia">
-      <a href="#"><img src="images/facebook.png" alt="Facebook" /></a>
-      <a href="#"><img src="images/twitter.png" alt="Twitter" /></a>
-      <a href="#"><img src="images/instagram.png" alt="Instagram" /></a>
+        <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+        <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
     </nav>
-    <p><a href="images/wireframe-contact.png" target="_blank">View Wireframe</a></p>
-  </footer>
+    <p><a href="images/wireframe-contact.png" target="_blank" rel="noopener">View Contact Page Wireframe</a></p>
+</footer>
 </body>
 </html>
 
